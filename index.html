@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Title-->
+    <title>student management system</title>
+     <!-- CSS File-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Student Management CRUD</h2>
+    <!--Table-->
+    <table>
+        <!--Row-1-->
+        <tr class="td-flex">
+            <!--Column-1-->
+            <td>
+                <!--Form-->
+                <form class="form-grid" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    
+                  <!--div-1-->
+                  <div>
+                    <!-- <label>Full Name</label> -->
+                    <!--Validation Error-->
+                    <label class="validation-error hide" id="userNamevalidationError">This field is required</label>
+                    <!--Input User Name-->
+                    <input type="text" name="userName" id="userName" placeholder="Name">
+                </div>
+                <!--div-2-->
+                <div>
+                    <!-- <label>Rollno</label> -->
+                    <!--Validation Error-->
+                    <label class="validation-error hide" id="rollNovalidationError" >This field is required</label>
+                    <!--Input Roll No-->
+                    <input type="text" name="rollNo" id="rollNo" placeholder="Email">
+                </div>
+                    <!--div-3-->
+                    <div>
+                        <!-- <label>Student Class</label> -->
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="stdClassvalidationError">This field is required</label>
+                       <!--Input Student Class-->
+                        <input type="number" name="number" id="stdClass" placeholder="GPA">
+                    </div>
+                    <!--div-4-->
+                    <div>
+                        <!-- <label>Total Subject</label> -->
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="tsubvalidationError">This field is required</label>
+                        <!--Input Total Subject-->
+                        <input type="number" name="tsub" id="tsub" placeholder="Age">
+                    </div>
+                    <!--div-5-->
+                    <div class="div-span">
+                        <!-- <label>Age</label> -->
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="agevalidationError">This field is required</label>
+                        <!--Input Age-->
+                        <input type="text" name="age" id="age" placeholder="Degree">
+                    </div>
+                    <!--div-6-->
+                    <br>
+                    <div class="form-action-buttons">
+                        <!--Input Button-->
+                        <input type="submit" value="Submit">
+                    </div>
+                    <br>
+                    <br>
+                    <!-- <div class="Search-bar">
+                        Search by Name, email, degree
+                    </div> -->
+                </form>
+            </td>
+            <!--Column-2-->
+            <td>
+                <!--Nested Table-->
+                <table class="list" id="stdlist">
+                    <!--Table Head-->
+                    <thead>
+                        <!--Row-2-->
+                        <tr>
+                            <!-- <th>ID</th> -->
+                            <th>Student Name</th>
+                            <th> Email</th>
+                            <th>GPA</th>
+                            <th>Age</th>
+                            <th>Degree</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <!--Table Body-->
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- JS File-->
+    <script src="script.js"></script>
+</body>
+</html>
